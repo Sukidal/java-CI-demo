@@ -24,11 +24,11 @@ public class RegularExpressionTest extends TestCase {
 
         String s4 = "aab";
         String p4 = "c*a*b";
-        assertFalse(regularExpression.isMatch(s4, p4));
+        assertTrue(regularExpression.isMatch(s4, p4));
 
         String s5 = "mississippi";
         String p5 = "mis*is*p*.";
-        assertTrue(regularExpression.isMatch(s5, p5));
+        assertFalse(regularExpression.isMatch(s5, p5));
 
     }
 }
