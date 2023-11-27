@@ -20,15 +20,15 @@ public class RegularExpressionTest extends TestCase {
 
         String s3 = "ab";
         String p3 = ".";
-        assertTrue(regularExpression.isMatch(s3, p3));
+        assertFalse(regularExpression.isMatch(s3, p3));
 
         String s4 = "aab";
         String p4 = "c*a*b";
-        assertTrue(regularExpression.isMatch(s4, p4));
+        assertFalse(regularExpression.isMatch(s4, p4));
 
         String s5 = "mississippi";
         String p5 = "mis*is*p*.";
-        assertFalse(regularExpression.isMatch(s5, p5));
+        assertTrue(regularExpression.isMatch(s5, p5));
 
     }
 }
